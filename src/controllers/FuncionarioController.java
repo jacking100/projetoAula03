@@ -7,6 +7,7 @@ import java.util.UUID;
 
 import entities.Endereco;
 import entities.Funcionario;
+import repositories.FuncionarioRepository;
 
 public class FuncionarioController {
 	
@@ -73,6 +74,9 @@ public class FuncionarioController {
 		
 		
 		scanner.close();
-	}
+		
+		var funcionarioRepository = new FuncionarioRepository();
+		funcionarioRepository.inserir(funcionario);
+		}
 
 }
